@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <s1>
+                <</s1> <span>无连接</span>
+                    <s2><img src="images/a.jpg" alt=""></s2>
+        </div>
+        <div class="main">
+            <ul class="list">
+                <li>电源
+                    <div class="hao">
+                        电源
+                    </div>
+                </li>
+                <li>首页
+                    <!-- <div>首页</div> -->
+                </li>
+                <li>菜单
+                    <!-- <div>菜单</div> -->
+                </li>
+                <li>截屏
+                    <!-- <div>截屏</div> -->
+                </li>
+            </ul>
+        </div>
+        <div class="foot"></div>
+    </div>
+</body>
+
+</html>
+<script src="js/flexible.js"></script>
+<script>
+    var list = document.querySelector(".list"),
+        lis = [...document.querySelectorAll(".list li")],
+        div = document.querySelector(".hao");
+    console.log(div)
+    lis.forEach(function(item) {
+        item.onclick = function(e) {
+            var tar = e.targrt || e.srcElement;
+            console.log(div.innerHTML)
+            console.log(tar.innerHTML)
+            div.innerHTML = tar.innerHTML;
+        }
+
+    })
+</script>
